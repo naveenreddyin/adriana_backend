@@ -1,0 +1,75 @@
+[
+    {
+        "pk": 1,
+        "text": "Are you hungry?",
+        "parent": null,
+        "children": [
+            "Yes",
+            "No"
+        ]
+    },
+    {
+        "pk": 2,
+        "text": "Yes",
+        "parent": 1,
+        "children": [
+            "What would you like to eat?"
+        ]
+    },
+    {
+        "pk": 3,
+        "text": "No",
+        "parent": 1,
+        "children": [
+            "Ok. Call me when you're hungry."
+        ]
+    },
+    {
+        "pk": 4,
+        "text": "Ok. Call me when you're hungry.",
+        "parent": 3,
+        "children": []
+    },
+    {
+        "pk": 5,
+        "text": "What would you like to eat?",
+        "parent": 2,
+        "children": [
+            "Hamburger",
+            "Pizza",
+            "Pop Corn",
+            "Chicken",
+            "Beef"
+        ]
+    },
+    {
+        "pk": 6,
+        "text": "Hamburger",
+        "parent": 5,
+        "children": []
+    },
+    {
+        "pk": 7,
+        "text": "Pizza",
+        "parent": 5,
+        "children": []
+    },
+    {
+        "pk": 8,
+        "text": "Pop Corn",
+        "parent": 5,
+        "children": []
+    },
+    {
+        "pk": 9,
+        "text": "Chicken",
+        "parent": 5,
+        "children": []
+    },
+    {
+        "pk": 10,
+        "text": "Beef",
+        "parent": 5,
+        "children": []
+    }
+]
