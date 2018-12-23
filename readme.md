@@ -2,8 +2,9 @@
 ## To run
 1. Create virtualenv with python 3 
 2. Clone this repository and run pip install -r requirements.txt
-3. The test coverage is 94%, to see it, run 'coverage run --source='.' manage.py test' and than 'coverage report'
-4. This views and models are properly tested.
+3. Run command 'python manage.py migrate' to generate sqlite database.
+4. The test coverage is 94%, to see it, run 'coverage run --source='.' manage.py test' and than 'coverage report'
+5. This views and models are properly tested.
 
 ## Limitations and future improvements
 1. More than 5 answers to a question is not permitted now.
