@@ -1,5 +1,5 @@
 """
-WSGI config for adriana_backend project.
+WSGI config for ariana_backend project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'adriana_backend.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ariana_backend.settings')
 
 application = get_wsgi_application()

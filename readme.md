@@ -1,4 +1,4 @@
-# This is the backend for Adriana project
+# This is the backend for Ariana project
 ## To run
 1. Create virtualenv with python 3 
 2. Clone this repository and run pip install -r requirements.txt
