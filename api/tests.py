@@ -3,7 +3,7 @@ import os
 from rest_framework.test import APITestCase
 from rest_framework.test import APIClient
 
-from api.models import Topic
+from api.models import Topic, TopicLog
 
 
 class ApiTestCases(APITestCase):
@@ -62,8 +62,8 @@ class ApiTestCases(APITestCase):
         response = client.get('/api/v1/topic/1/')
         self.assertEqual(response.status_code, 404)
 
-        # Now calling with other two params, namely parent_id and text and it should return one object and status 200
-        response = client.get('/api/v1/topic/1/Yes/')
+        # Now calling with other two params, namely parent_id and child_id and it should return one object and status 200
+        response = client.get('/api/v1/topic/1/2/')
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.status_code, 200)
 
@@ -92,3 +92,22 @@ class ApiTestCases(APITestCase):
         response = client.get('/api/v1/load/')
         self.assertEqual(response.status_code, 200)
         self.assertGreater(len(response.data), 1)
+
+    def test_log_model(self):
+        """
+        This is to test the model TopicLog to save the logs.
+        """
+        self.assertEqual(len(TopicLog.objects.all()), 0)
+        TopicLog.objects.create(log="what you like to eat? --> Pizza")
+        self.assertEqual(len(TopicLog.objects.all()), 1)
+
+
+    def test_log_api_view(self):
+        """
+        This is to test the api view which is used by frontend client
+        at the end to post logs.
+        A simple POST view would do.
+        """
+        client = APIClient()
+        response = client.post('/api/v1/log/', {"log": "what you like to eat? --> Pizza"})
+        self.assertEqual(response.status_code, 201)

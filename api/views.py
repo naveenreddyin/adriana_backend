@@ -5,10 +5,10 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.conf import settings
 
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.response import Response
 
-from api.serializers import ListALLTopicsSerializer
+from api.serializers import ListALLTopicsSerializer, TopicLogSerializer
 from api.models import Topic
 
 
@@ -51,14 +51,17 @@ class ListTopicsApiView(ListAPIView):
     queryset = Topic.objects.all()
     serializer_class = ListALLTopicsSerializer
 
-    def list(self, request, parent_id=None, text=None):
+    def list(self, request, parent_id=None, child_id=None):
         queryset = self.get_queryset()
-
         if not parent_id:
             queryset = queryset.filter(parent=None)
         else:
             parent = get_object_or_404(Topic, pk=parent_id)
-            queryset = queryset.filter(parent=parent).filter(text__iexact=text)
+            queryset = queryset.filter(parent=parent).filter(pk=child_id)
 
         serializer = ListALLTopicsSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+class TopicLogCreateApiView(CreateAPIView):
+    serializer_class = TopicLogSerializer

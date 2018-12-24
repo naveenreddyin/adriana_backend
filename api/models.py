@@ -21,3 +21,7 @@ class Topic(models.Model):
             return
         else:
             super().save(*args, **kwargs)
+
+
+class TopicLog(models.Model):
+    log = models.CharField(max_length=256)

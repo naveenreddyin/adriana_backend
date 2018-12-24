@@ -24,7 +24,7 @@ SECRET_KEY = 'l-^)koa!g=@sl^e-*i4$5rwc2e&=iywte^%ovki%0lk0e#4*_y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['*'] # wild card for time being not for production
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third party
     'django_extensions',
+    'corsheaders',
     'rest_framework',
     'rest_framework_swagger',
     # Custom apps
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -126,3 +128,6 @@ STATIC_URL = '/static/'
 
 # Custom settings
 DATA_FILE = 'data.json'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
