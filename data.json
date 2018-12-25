@@ -1,182 +1,82 @@
 [
     {
-        "pk": 23,
         "text": "Are you hungry?",
-        "parent": null,
-        "children": [
-            {
-                "pk": 24,
-                "text": "Yes",
-                "count": 1
-            },
-            {
-                "pk": 25,
-                "text": "No",
-                "count": 1
-            }
-        ]
+        "ref_id": 0,
+        "parent_ref_id": null
     },
     {
-        "pk": 24,
         "text": "Yes",
-        "parent": 23,
-        "children": [
-            {
-                "pk": 26,
-                "text": "What would you like to eat?",
-                "count": 5
-            }
-        ]
+        "ref_id": 1,
+        "parent_ref_id": 0
     },
     {
-        "pk": 25,
         "text": "No",
-        "parent": 23,
-        "children": [
-            {
-                "pk": 27,
-                "text": "Ok. Call me when you're hungry.",
-                "count": 0
-            }
-        ]
+        "ref_id": 2,
+        "parent_ref_id": 0
     },
     {
-        "pk": 26,
         "text": "What would you like to eat?",
-        "parent": 24,
-        "children": [
-            {
-                "pk": 28,
-                "text": "Hamburger",
-                "count": 1
-            },
-            {
-                "pk": 29,
-                "text": "Pizza",
-                "count": 1
-            },
-            {
-                "pk": 30,
-                "text": "Pop Corn",
-                "count": 0
-            },
-            {
-                "pk": 31,
-                "text": "Chicken",
-                "count": 0
-            },
-            {
-                "pk": 32,
-                "text": "Beef",
-                "count": 0
-            }
-        ]
+        "ref_id": 3,
+        "parent_ref_id": 1
     },
     {
-        "pk": 27,
         "text": "Ok. Call me when you're hungry.",
-        "parent": 25,
-        "children": []
+        "ref_id": 4,
+        "parent_ref_id": 2
     },
     {
-        "pk": 28,
         "text": "Hamburger",
-        "parent": 26,
-        "children": [
-            {
-                "pk": 33,
-                "text": "Nice, I will order a hamburger for you!",
-                "count": 0
-            }
-        ]
+        "ref_id": 5,
+        "parent_ref_id": 3
     },
     {
-        "pk": 29,
         "text": "Pizza",
-        "parent": 26,
-        "children": [
-            {
-                "pk": 34,
-                "text": "Would you like pizza with mushrooms?",
-                "count": 2
-            }
-        ]
+        "ref_id": 6,
+        "parent_ref_id": 3
     },
     {
-        "pk": 30,
         "text": "Pop Corn",
-        "parent": 26,
-        "children": []
+        "ref_id": 7,
+        "parent_ref_id": 3
     },
     {
-        "pk": 31,
         "text": "Chicken",
-        "parent": 26,
-        "children": []
+        "ref_id": 8,
+        "parent_ref_id": 3
     },
     {
-        "pk": 32,
         "text": "Beef",
-        "parent": 26,
-        "children": []
+        "ref_id": 9,
+        "parent_ref_id": 3
     },
     {
-        "pk": 33,
         "text": "Nice, I will order a hamburger for you!",
-        "parent": 28,
-        "children": []
+        "ref_id": 10,
+        "parent_ref_id": 5
     },
     {
-        "pk": 34,
         "text": "Would you like pizza with mushrooms?",
-        "parent": 29,
-        "children": [
-            {
-                "pk": 35,
-                "text": "Yes",
-                "count": 1
-            },
-            {
-                "pk": 36,
-                "text": "No",
-                "count": 1
-            }
-        ]
+        "ref_id": 11,
+        "parent_ref_id": 6
     },
     {
-        "pk": 35,
         "text": "Yes",
-        "parent": 34,
-        "children": [
-            {
-                "pk": 37,
-                "text": "Ok, I will order the best pizza in town for you",
-                "count": 0
-            }
-        ]
+        "ref_id": 12,
+        "parent_ref_id": 11
     },
     {
-        "pk": 36,
         "text": "No",
-        "parent": 34,
-        "children": [
-            {
-                "pk": 38,
-                "text": "No? Well... stay hungry then",
-                "count": 0
-            }
-        ]
+        "ref_id": 13,
+        "parent_ref_id": 11
     },
     {
-        "pk": 37,
         "text": "Ok, I will order the best pizza in town for you",
-        "parent": 35,
-        "children": []
+        "ref_id": 14,
+        "parent_ref_id": 12
     },
     {
-        "pk": 38,
         "text": "No? Well... stay hungry then",
-        "parent": 36,
-        "children": []
+        "ref_id": 15,
+        "parent_ref_id": 13
     }
 ]

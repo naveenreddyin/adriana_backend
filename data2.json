@@ -1,0 +1,16 @@
+{
+    "Are you hungry?": {
+      "Yes": {
+        "What would you like to eat?": {
+          "Hamburger": "Nice, I will order a hamburger for you!",
+          "Pizza": {
+            "Would you like pizza with mushrooms?": {
+              "Yes": "Ok, I will order the best pizza in town for you",
+              "No": "No? Well... stay hungry then"
+            }
+          }
+        }
+      },
+      "No": "Ok. Call me when you're hungry."
+    }
+  }
